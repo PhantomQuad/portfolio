@@ -55,17 +55,17 @@
 }
 
 .bg-2 {
-  padding-top: 50px;
+  padding-top: 25px;
   background-color: #474e5d;
   height: 100vh;
   color: #ffffff;
-  font-family: "Cuprum", sans-serif;
-  font-size: 18px;
+  /* font-family: "Cuprum", sans-serif; */
+  font-size: 20px;
 }
 
 .arrow {
   position: absolute;
-  top: 90vh;
+  top: 85vh;
   left: 50%;
   transform: translate(-50%, -50%);
 }

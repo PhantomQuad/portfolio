@@ -7,10 +7,10 @@ function App() {
     <>
       <div id="home" className="bg-1 text-center text-center-vh">
         <div>
-          Hello, I'm <span class="highlight">Nathan Anderson</span>.
+          Hello, I'm <span className="highlight">Nathan Anderson</span>.
           <br />
           I'm a web developer.
-          <a href="#experience" class="arrow">
+          <a href="#experience" className="arrow">
             <span></span>
             <span></span>
             <span></span>
@@ -18,58 +18,58 @@ function App() {
         </div>
       </div>
       <div id="experience" className="bg-2 text-center">
-        <div class="container">
+        <div className="container">
           <h1 className="highlight mb-5">Experience</h1>
-          <div class="row align-items-start row-cols-4 mb-5">
+          <div className="row align-items-start row-cols-4 mb-5">
             <div className="col">
               <Image className="pro-image" src="/assets/img/bootstrap.png" />
-              Bootstrap
+              <p>Bootstrap</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/html-coding.png" />
-              HTML
+              <p>HTML</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/css.png" />
-              CSS
+              <p>CSS</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/javascript.png" />
-              Javascript
+              <p>Javascript</p>
             </div>
           </div>
-          <div class="row align-items-center row-cols-4 mb-5">
-            <div class="col">
+          <div className="row align-items-center row-cols-4 mb-5">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/debug.png" />
-              Debugging
+              <p>Debugging</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/github.png" />
-              Github
+              <p>Github</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/mongo.png" />
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/oop.png" />
-              Object-oriented Programming
+              <p>Object-oriented Programming</p>
             </div>
           </div>
-          <div class="row align-items-center row-cols-4 mb-5">
-            <div class="col">
+          <div className="row align-items-center row-cols-4 mb-5">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/node.png" />
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/pair.png" />
-              Pair Programming
+              <p>Pair Programming</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/regex.png" />
-              RegEX
+              <p>RegEX</p>
             </div>
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/tdd.png" />
-              Test-driven development
+              <p>Test-driven development</p>
             </div>
           </div>
         </div>
