@@ -18,7 +18,7 @@ function App() {
         </div>
       </div>
       <div id="experience" className="bg-2 text-center">
-        <div class="container inner_box">
+        <div class="container">
           <h1 className="highlight mb-5">Experience</h1>
           <div class="row align-items-start row-cols-4 mb-5">
             <div className="col">
