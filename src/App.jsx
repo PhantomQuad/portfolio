@@ -18,10 +18,10 @@ function App() {
         </div>
       </div>
       <div id="experience" className="bg-2 text-center">
-        <div class="container">
+        <div class="container inner_box">
           <h1 className="highlight mb-5">Experience</h1>
           <div class="row align-items-start row-cols-4 mb-5">
-            <div class="col">
+            <div className="col">
               <Image className="pro-image" src="/assets/img/bootstrap.png" />
               Bootstrap
             </div>

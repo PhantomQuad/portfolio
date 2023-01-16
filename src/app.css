@@ -1,18 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
 
+.u-richtext-invert > * {
+  /* background-color: rgba(0, 0, 0, 0.6); */
+  /* background-color: rgba(197, 40, 40, 0.6); */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto; */
+  /* width: calc(100% - 200px); */
+  /* max-width: 640px; */
+  /* min-height: 100vh; */
+}
+
+.inner_box {
+  background-color: rgb(29, 205, 159, 0.33);
+  border-radius: 40px;
+  padding: 15px;
+}
+
 #home {
   font-family: "Suez One", serif;
   font-size: 54px;
 }
 
 #home .highlight {
-  color: yellow;
+  color: #ffe037;
   font-size: 70px;
 }
 
 #experience .highlight {
   font-family: "Suez One", serif;
-  color: yellow;
+  color: #ffe037;
   font-size: 70px;
 }
 
@@ -28,14 +49,14 @@
 }
 
 .bg-1 {
-  background-color: #1abc9c;
+  background-color: rgb(29, 205, 159);
   height: 100vh;
   color: #ffffff;
 }
 
 .bg-2 {
   padding-top: 50px;
-  background-color: #474e5d;
+  background-color: grey;
   height: 100vh;
   color: #ffffff;
 }
