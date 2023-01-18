@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cuprum&family=Suez+One&display=swap");
 
-.u-richtext-invert > * {
-  /* background-color: rgba(0, 0, 0, 0.6); */
-  /* background-color: rgba(197, 40, 40, 0.6); */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  margin-left: auto;
-  margin-right: auto; */
-  /* width: calc(100% - 200px); */
-  /* max-width: 640px; */
-  /* min-height: 100vh; */
-}
-
 .inner_box {
   background-color: rgb(29, 205, 159, 0.33);
   border-radius: 40px;
@@ -38,8 +23,8 @@
 }
 
 .pro-image {
-  height: 80px;
-  /* width: auto; */
+  height: auto;
+  width: 60px;
 }
 
 .text-center-vh {
@@ -49,17 +34,28 @@
 }
 
 .bg-1 {
-  background-color: rgb(29, 205, 159);
+  background-color: #1dcd9f;
   height: 100vh;
+  width: 100vw;
   color: #ffffff;
 }
 
 .bg-2 {
-  padding-top: 25px;
+  padding-top: 15px;
   background-color: #474e5d;
   height: 100vh;
+  width: 100vw;
   color: #ffffff;
   /* font-family: "Cuprum", sans-serif; */
+  font-size: 20px;
+}
+
+.bg-3 {
+  padding-top: 15px;
+  background-color: #1dcd9f;
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
   font-size: 20px;
 }
 
