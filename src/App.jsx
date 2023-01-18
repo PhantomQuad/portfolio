@@ -1,12 +1,34 @@
 import "./app.css";
-import Table from "react-bootstrap/Table";
-import { Col, Container, Image, Row, Stack } from "react-bootstrap";
+import { Image } from "react-bootstrap";
+import React from "react";
+import { Header } from "./Header";
+import { Item } from "./Item";
+import { List } from "./List";
+import { motion } from "framer-motion";
+import { Route, Routes, useParams } from "react-router-dom";
 
-function App() {
+function Store({ match }) {
+  let { id } = useParams();
+  console.log(match);
+  const imageHasLoaded = true;
+
+  return (
+    <>
+      <List selectedId={id} />
+      <motion.div exit={{ opacity: 0 }}>
+        {id && imageHasLoaded && <Item id={id} key={id} />}
+      </motion.div>
+    </>
+  );
+}
+
+export default function App() {
   return (
     <>
       <div id="home" className="bg-1 text-center text-center-vh">
-        <div>
+        <Header />
+
+        <div className="">
           Hello, I'm <span className="highlight">Nathan Anderson</span>.
           <br />
           I'm a web developer.
@@ -118,11 +140,16 @@ function App() {
         </div>
 
         <div id="projects" className="bg-3 text-center">
-          <div className="container"></div>
+          <div className="container">
+            <motion.div layout>
+              <Routes>
+                <Route path="/:id" element={<Store />} />
+                <Route path="/" element={<Store />} />
+              </Routes>
+            </motion.div>
+          </div>
         </div>
       </div>
     </>
   );
 }
-
-export default App;
