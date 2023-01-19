@@ -1,33 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Cuprum&family=Suez+One&display=swap");
 
 header {
-  /* border-bottom: 1px solid var(--divider);
-  position: relative; */
   position: absolute;
-  top: 200px;
-  left: 200px;
+  top: 15px;
+  left: 15px;
 }
 
 .avatar {
-  background: var(--divider);
   border-radius: 50%;
   position: absolute;
-  bottom: 12px;
-  right: 0;
   overflow: hidden;
 }
 
 .avatar,
 .avatar img {
-  width: 150px;
-  height: 150px;
+  width: 170px;
+  height: 170px;
 }
 
-/* .inner_box {
-  background-color: rgb(29, 205, 159, 0.33);
-  border-radius: 40px;
-  padding: 15px;
-} */
+.social-img {
+  height: auto;
+  width: 150px;
+}
 
 #home {
   font-family: "Suez One", serif;
@@ -50,6 +44,12 @@ header {
   width: 60px;
 }
 
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-center-vh {
   display: flex;
   justify-content: center;
@@ -69,7 +69,6 @@ header {
   height: 100vh;
   width: 100vw;
   color: #ffffff;
-  /* font-family: "Cuprum", sans-serif; */
   font-size: 20px;
 }
 
@@ -80,6 +79,13 @@ header {
   width: 100vw;
   color: #ffffff;
   font-size: 20px;
+}
+
+.bg-4 {
+  padding-top: 15px;
+  background-color: #474e5d;
+  height: 50vh;
+  width: 100vw;
 }
 
 .arrow {
@@ -118,91 +124,21 @@ header {
   }
 }
 
-/* import */
-
-.App {
-  font-family: sans-serif;
-  text-align: center;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  background: black;
-  overflow-y: scroll;
-  --secondary: rgb(161, 161, 161);
-  --divider: #343434;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: ".SFNSText", "SFProText-Regular", "SFUIText-Regular", ".SFUIText",
-    Helvetica, Arial, sans-serif;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-
-/* #root {
-  display: flex;
-  justify-content: center;
-} */
-
-/* .screen {
-  width: 100%;
-  height: 100%;
-} */
-
-/* .pic-container {
-  max-width: 990px;
-  flex: 1 1 100%;
-  padding: 45px 25px;
-} */
-
-h1 {
-  font-weight: bold;
-  color: white;
-  margin: 6px 0 12px;
-}
-
-/* .date {
-  color: var(--secondary);
-  font-size: 14px;
-  text-transform: uppercase;
-} */
-
-ul,
-li {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
 .card-list {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  /* align-items: center; */
+  justify-content: center;
 }
 
 .card {
   position: relative;
   padding: 25px;
-  height: 460px;
-  flex: 0 0 40%;
+  height: 280px;
+  flex: 0 0 30%;
   max-width: 40%;
 }
-
-/* .card:nth-child(4n + 1),
-.card:nth-child(4n + 4) {
-  flex: 0 0 60%;
-  max-width: 60%;
-}
-
-.card:nth-child(odd) {
-  padding-left: 0;
-}
-
-.card:nth-child(even) {
-  padding-right: 0;
-} */
 
 .card-content-container {
   width: 100%;
@@ -240,6 +176,10 @@ li {
   pointer-events: none;
 }
 
+.open .card-content a {
+  pointer-events: all;
+}
+
 .card-open-link {
   position: absolute;
   top: 0;
@@ -247,7 +187,6 @@ li {
   right: 0;
   bottom: 0;
 }
-
 .card-image-container {
   position: absolute;
   top: 0;
@@ -310,46 +249,63 @@ h2 {
 }
 
 .content-container {
-  padding: 460px 35px 35px 35px;
+  padding: 430px 35px 35px 35px;
   max-width: 700px;
   width: 90vw;
 }
 
-p {
+.card-content-container p {
   color: #9d9ca1;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 26px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
   .card {
-    flex: 0 0 50%;
-    max-width: 50%;
+    flex: 1 1 50%;
+    max-width: 30vw;
+    padding: 10px;
+    height: 42vh;
   }
+}
 
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 4) {
-    flex: 0 0 50%;
-    max-width: 50%;
+@media only screen and (max-width: 992px) {
+  .card {
+    flex: 1 1 50%;
+    max-width: 30vw;
+    padding: 10px;
+    height: 42vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    flex: 1 1 50%;
+    max-width: 30vw;
+    padding: 10px;
+    height: 42vh;
+  }
+  .card-content-container.open {
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .card {
-    flex: 1 0 100%;
-    max-width: 100%;
+    flex: 1 1 100%;
+    max-width: 42vw;
     padding: 10px;
-    padding-left: 0;
-    padding-right: 0;
+    /* padding-left: 0; */
+    /* padding-right: 0; */
+    height: 28vh;
   }
+}
 
-  .card:nth-child(4n + 1),
-  .card:nth-child(4n + 4) {
-    flex: 1 0 100%;
-    max-width: 100%;
-  }
-
-  .card-content-container.open {
-    padding: 0;
+@media only screen and (max-width: 350px) {
+  .card {
+    flex: 0 0 100%;
+    max-width: 38vw;
+    padding: 0px;
+    height: 28vh;
   }
 }

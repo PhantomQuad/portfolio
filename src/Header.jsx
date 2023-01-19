@@ -1,10 +1,10 @@
 import * as React from "react";
-import { Avatar } from "react-lorem-ipsum";
+import { Image } from "react-bootstrap";
 
 export const Header = () => (
   <header>
     <div className="avatar">
-      <Avatar />
+      <Image src="/assets/img/me.png" />
     </div>
   </header>
 );

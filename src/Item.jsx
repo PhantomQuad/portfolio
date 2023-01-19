@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import { items } from "./data";
 
 export function Item({ id }) {
-  const { category, title } = items.find((item) => item.id === id);
+  const { category, title, title2, title3, livelink, repolink, info } =
+    items.find((item) => item.id === id);
 
   return (
     <>
@@ -25,21 +26,37 @@ export function Item({ id }) {
             className="card-image-container"
             layoutId={`card-image-container-${id}`}
           >
-            <img className="card-image" src={`images/${id}.jpg`} alt="" />
+            <img src={`/assets/img/projects/${id}.png`} alt="" />
           </motion.div>
           <motion.div
             className="title-container"
             layoutId={`title-container-${id}`}
           >
             <span className="category">{category}</span>
-            <h2>{title}</h2>
+            {title ? <h2>{title}</h2> : null}
+            {title2 ? <p>{title2}</p> : null}
+            {title3 ? (
+              <p>
+                <b>{title3}</b>
+              </p>
+            ) : null}
+            <div>
+              {repolink ? (
+                <a target="_blank" rel="noreferrer" alt="" href={repolink}>
+                  Repository
+                </a>
+              ) : null}
+            </div>
+            <div>
+              {livelink ? (
+                <a target="_blank" rel="noreferrer" alt="" href={livelink}>
+                  Live Site
+                </a>
+              ) : null}
+            </div>
           </motion.div>
           <motion.div className="content-container" animate>
-            <LoremIpsum
-              p={6}
-              avgWordsPerSentence={6}
-              avgSentencesPerParagraph={4}
-            />
+            <p>{info}</p>
           </motion.div>
         </motion.div>
       </div>

@@ -1,67 +1,62 @@
 export const items = [
-  // Photo by ivan Torres on Unsplash
-  {
-    id: "c",
-    category: "Pizza",
-    title: "5 Food Apps Delivering the Best of Your City",
-    pointOfInterest: 80,
-    backgroundColor: "#814A0E",
-  },
-  // Photo by Dennis Brendel on Unsplash
-  {
-    id: "f",
-    category: "How to",
-    title: "Arrange Your Apple Devices for the Gram",
-    pointOfInterest: 120,
-    backgroundColor: "#959684",
-  },
-  // Photo by Alessandra Caretto on Unsplash
   {
     id: "a",
-    category: "Pedal Power",
-    title: "Map Apps for the Superior Mode of Transport",
-    pointOfInterest: 260,
-    backgroundColor: "#5DBCD2",
+    category: "Recruitment Website",
+    title: "Fullstack App - MERN",
+    title2: "MongoDB, Express, React, Node",
+    title3: "Private Github repo access available on request",
+    info: "As part of a team, I developed a full-stack application using agile methodologies and technologies such as HTML, CSS, Bootstrap, Node, MongoDB, React, Express and JavaScript with pair programming. The application allows employers to browse and filter through the profiles of bootcamp graduates. Hosted on Render",
+    livelink: "https://tda-graduates.onrender.com",
+    backgroundColor: "#814A0E",
   },
-  // Photo by Taneli Lahtinen on Unsplash
-  {
-    id: "g",
-    category: "Holidays",
-    title: "Our Pick of Apps to Help You Escape From Apps",
-    pointOfInterest: 200,
-    backgroundColor: "#8F986D",
-  },
-  // Photo by Simone Hutsch on Unsplash
-  {
-    id: "d",
-    category: "Photography",
-    title: "The Latest Ultra-Specific Photography Editing Apps",
-    pointOfInterest: 150,
-    backgroundColor: "#FA6779",
-  },
-  // Photo by Siora Photography on Unsplash
-  {
-    id: "h",
-    category: "They're all the same",
-    title: "100 Cupcake Apps for the Cupcake Connoisseur",
-    pointOfInterest: 60,
-    backgroundColor: "#282F49",
-  },
-  // Photo by Yerlin Matu on Unsplash
-  {
-    id: "e",
-    category: "Cats",
-    title: "Yes, They Are Sociopaths",
-    pointOfInterest: 200,
-    backgroundColor: "#AC7441",
-  },
-  // Photo by Ali Abdul Rahman on Unsplash
   {
     id: "b",
-    category: "Holidays",
-    title: "Seriously the Only Escape is the Stratosphere",
-    pointOfInterest: 260,
-    backgroundColor: "#CC555B",
+    category: "Adventure Game",
+    title: "OOP Text based game",
+    title2: "HTML, JavaScript, CSS",
+    info: "I have created a text-based adventure game using JavaScript and object-oriented programming principles. The game consists of three classes: Room, Character, and Enemy. Each class has its own constructor and methods to create the game. The Room class represents rooms, Character class represents NPCs and the Enemy class represents enemies with weakness the player can exploit. The methods in the Room class allow navigation and the methods in Character class allow interaction with NPCs.",
+    livelink: "https://phantomquad.github.io/Project-Game/",
+    repolink: "https://github.com/PhantomQuad/Project-Game/",
+    backgroundColor: "#959684",
+  },
+  {
+    id: "c",
+    category: "The Fitness Quiz?",
+    title: "Multiple choice quiz",
+    title2: "HTML, JavaScript, Bootstrap, CSS",
+    info: "This code is a JavaScript quiz website using Bootstrap. It has functions for starting the quiz, navigating questions, calculating results, and displaying them. The introduction screen is hidden when the quiz starts and questions are displayed. The user's answers are used to calculate a score and a result message is displayed based on the score.",
+    livelink: "https://phantomquad.github.io/Project-JS-Quiz/",
+    repolink: "https://github.com/PhantomQuad/Project-JS-Quiz/",
+    backgroundColor: "#5DBCD2",
+  },
+  {
+    id: "d",
+    category: "Ceaser Cipher",
+    title: "Encode and decode text strings",
+    title2: "HTML, JavaScript, Bootstrap, CSS",
+    info: "This Caesar Cipher project uses Bootstrap and JavaScript to convert user's message based on chosen encryption/decryption and key values.",
+    livelink: "https://phantomquad.github.io/Project-Cipher/",
+    repolink: "https://github.com/PhantomQuad/Project-Cipher/",
+    backgroundColor: "#8F986D",
+  },
+  {
+    id: "e",
+    category: "Hobby Site",
+    title: "Personal hobby project",
+    title2: "HTML and CSS",
+    info: "This website serves as an informational resource for the popular fitness program, CrossFit. It offers a basic overview and introduction to the program through a clean and simple design.",
+    livelink: "https://phantomquad.github.io/Project-Hobby/flexibility.html/",
+    repolink: "https://github.com/PhantomQuad/Project-Hobby/",
+    backgroundColor: "#FA6779",
+  },
+  {
+    id: "f",
+    category: "Coming Soon",
+    title: "",
+    title2: "",
+    info: "",
+    // livelink: "https://tda-graduates.onrender.com",
+    backgroundColor: "#282F49",
   },
 ];
 
