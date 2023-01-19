@@ -212,32 +212,32 @@ export default function App() {
         <div id="contact" className="bg-4 text-center">
           <h1 className="highlight mb-5">Contact Me</h1>
           <div className="container-fluid">
-            <div className="row row-cols-4 g-0 social">
+            <div className="row justify-content-center">
               <div className="col-6">
                 <a
+                  href="https://www.linkedin.com/in/nathanganderson/"
                   target="_blank"
                   rel="noreferrer"
-                  alt="My Linkedin"
-                  href="https://www.linkedin.com/in/nathanganderson/"
+                  alt="My LinkedIn"
                 >
                   <img
                     className="social-img"
                     src="/assets/img/social/linkedin_icon.png"
-                    alt=""
+                    alt="LinkedIn Icon"
                   />
                 </a>
               </div>
               <div className="col-6">
                 <a
+                  href="https://github.com/PhantomQuad"
                   target="_blank"
                   rel="noreferrer"
                   alt="My Github"
-                  href="https://github.com/PhantomQuad"
                 >
                   <img
                     className="social-img"
                     src="/assets/img/social/github_icon.png"
-                    alt=""
+                    alt="Github Icon"
                   />
                 </a>
               </div>
