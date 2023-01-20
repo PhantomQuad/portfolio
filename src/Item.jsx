@@ -5,8 +5,18 @@ import { Link } from "react-router-dom";
 import { items } from "./data";
 
 export function Item({ id }) {
-  const { category, title, title2, title3, livelink, repolink, info } =
-    items.find((item) => item.id === id);
+  const {
+    category,
+    title,
+    title2,
+    title3,
+    livelink,
+    repolink,
+    repolink2,
+    reponame,
+    reponame2,
+    info,
+  } = items.find((item) => item.id === id);
 
   return (
     <>
@@ -43,7 +53,14 @@ export function Item({ id }) {
             <div>
               {repolink ? (
                 <a target="_blank" rel="noreferrer" alt="" href={repolink}>
-                  Repository
+                  {reponame}
+                </a>
+              ) : null}
+            </div>
+            <div>
+              {repolink2 ? (
+                <a target="_blank" rel="noreferrer" alt="" href={repolink2}>
+                  {reponame2}
                 </a>
               ) : null}
             </div>
