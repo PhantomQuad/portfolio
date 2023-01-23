@@ -4,7 +4,7 @@ import React from "react";
 import { Header } from "./Header";
 import { Item } from "./Item";
 import { List } from "./List";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 import { Route, Routes, useParams } from "react-router-dom";
 
 function Store() {
@@ -21,7 +21,25 @@ function Store() {
   );
 }
 
+const floatVariant = {
+  start: {
+    x: 0,
+    y: 0,
+  },
+  float: {
+    x: [0, -10, 10, -10, 0],
+    y: [0, -10, 10, -10, 0],
+    transition: {
+      duration: 2,
+      ease: "easeInOut",
+      loop: Infinity,
+      repeatDelay: 1,
+    },
+  },
+};
+
 export default function App() {
+  const floatControl = useAnimation();
   return (
     <>
       <div id="home" className="bg-1 text-center text-center-vh">
@@ -38,31 +56,50 @@ export default function App() {
         </div>
       </div>
 
-      <div id="experience" className="bg-2 text-center">
+      <motion.div
+        id="experience"
+        className="bg-2 text-center"
+        animate={floatControl}
+      >
         <h1 className="highlight mb-3">Experience</h1>
-        <div className="row row-cols-4 g-0">
+        <div className="row row-cols-4 g-0" animate={floatControl}>
           <div className="col">
-            <Image
+            <motion.img
               className="pro-image"
               src="/assets/img/experience/bootstrap.png"
+              variants={floatVariant}
+              initial="start"
+              animate="float"
             />
             <p>Bootstrap</p>
           </div>
           <div className="col">
-            <Image
+            <motion.img
               className="pro-image"
               src="/assets/img/experience/html-coding.png"
+              variants={floatVariant}
+              initial="start"
+              animate="float"
             />
             <p>HTML</p>
           </div>
           <div className="col">
-            <Image className="pro-image" src="/assets/img/experience/css.png" />
+            <motion.img
+              className="pro-image"
+              src="/assets/img/experience/css.png"
+              variants={floatVariant}
+              initial="start"
+              animate="float"
+            />
             <p>CSS</p>
           </div>
           <div className="col">
-            <Image
+            <motion.img
               className="pro-image"
               src="/assets/img/experience/javascript.png"
+              variants={floatVariant}
+              initial="start"
+              animate="float"
             />
             <p>Javascript</p>
           </div>
@@ -73,6 +110,9 @@ export default function App() {
             <Image
               className="pro-image"
               src="/assets/img/experience/debug.png"
+              variants={floatVariant}
+              initial="start"
+              animate="float"
             />
             <p>Debugging</p>
           </div>
@@ -182,7 +222,7 @@ export default function App() {
             <p>CI/CD pipelines</p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
       <div id="projects" className="bg-3">
         <h1 className="highlight mb-3 text-center">Projects</h1>
