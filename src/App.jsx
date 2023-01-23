@@ -25,7 +25,7 @@ export default function App() {
   return (
     <>
       <div id="home" className="bg-1 text-center text-center-vh">
-        <Header />
+        {/* <Header /> */}
         <div>
           Hello, I'm <span className="highlight">Nathan Anderson</span>.
           <br />

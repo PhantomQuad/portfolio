@@ -34,13 +34,13 @@ header {
 
 .avatar,
 .avatar img {
-  width: 170px;
-  height: 170px;
+  /* width: 170px; */
+  height: 8rem;
 }
 
 .social-img {
   height: auto;
-  width: 150px;
+  width: 10rem;
 }
 
 body {
@@ -57,12 +57,12 @@ li {
 
 #home {
   font-family: "Suez One", serif;
-  font-size: 54px;
+  font-size: 3.2rem;
 }
 
 #home .highlight {
   color: #ffe037;
-  font-size: 70px;
+  font-size: 4.3rem;
 }
 
 #experience .highlight {
@@ -85,7 +85,8 @@ li {
 
 .pro-image {
   height: auto;
-  width: 60px;
+  /* width: 70px; */
+  width: 5rem;
 }
 .text-center-vh {
   display: flex;
@@ -101,6 +102,7 @@ li {
 
 .bg-2 {
   padding-top: 15px;
+  padding-bottom: 25px;
   background-color: #474e5d;
   width: 100%;
   height: auto;
@@ -111,6 +113,7 @@ li {
 
 .bg-3 {
   padding-top: 15px;
+  padding-bottom: 25px;
   background-color: #1dcd9f;
   width: 100%;
   height: auto;
@@ -119,6 +122,7 @@ li {
 
 .bg-4 {
   padding-top: 15px;
+  padding-bottom: 25px;
   background-color: #474e5d;
   width: 100%;
   height: auto;
@@ -260,7 +264,7 @@ h2 {
 
 .category {
   color: #fff;
-  font-size: 14px;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
