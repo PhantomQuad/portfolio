@@ -129,6 +129,12 @@ li {
   overflow: hidden;
 }
 
+.bg-5 {
+  background-color: #1dcd9f;
+  height: 100vh;
+  color: #ffffff;
+}
+
 .arrow {
   position: absolute;
   top: 85vh;

@@ -1,20 +1,23 @@
 import "./app.css";
 import React from "react";
-import { Projects } from "./Projects";
-import { ContactMe } from "./ContactMe";
-import { Experience } from "./Experience";
-import { Home } from "./Home";
+import { Projects } from "./components/Projects";
+import { ContactMe } from "./components/ContactMe";
+import { Experience } from "./components/Experience";
+import { Home } from "./components/Home";
+import { Ani } from "./Ani";
 
 export default function App() {
   return (
     <>
-      {Home()}
+      <Home />
 
-      {Experience()}
+      <Experience />
 
-      {Projects()}
+      <Projects />
 
-      {ContactMe()}
+      <ContactMe />
+
+      <Ani />
     </>
   );
 }

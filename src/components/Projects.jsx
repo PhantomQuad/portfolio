@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Route, Routes, useParams } from "react-router-dom";
-import { List } from "./List";
-import { Item } from "./Item";
+import { List } from "./project_cards/List";
+import { Item } from "./project_cards/Item";
 
 function Store() {
   let { id } = useParams();
