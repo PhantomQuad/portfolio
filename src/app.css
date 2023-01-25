@@ -83,11 +83,19 @@ li {
   font-size: 70px;
 }
 
-.pro-image {
+.pro-image,
+.invader {
   height: auto;
   /* width: 70px; */
   width: 5rem;
 }
+
+.pro-image2 {
+  height: auto;
+  /* width: 70px; */
+  width: 1rem;
+}
+
 .text-center-vh {
   display: flex;
   justify-content: center;
@@ -131,7 +139,7 @@ li {
 
 .bg-5 {
   background-color: #1dcd9f;
-  height: 100vh;
+  height: 50vh;
   color: #ffffff;
 }
 
