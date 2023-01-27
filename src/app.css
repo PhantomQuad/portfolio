@@ -83,17 +83,10 @@ li {
   font-size: 70px;
 }
 
-.pro-image,
-.invader {
+.pro-image {
   height: auto;
   /* width: 70px; */
   width: 5rem;
-}
-
-.pro-image2 {
-  height: auto;
-  /* width: 70px; */
-  width: 1rem;
 }
 
 .text-center-vh {
