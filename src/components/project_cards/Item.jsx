@@ -42,7 +42,7 @@ export function Item({ id }) {
             layoutId={`title-container-${id}`}
           >
             <span className="category">{category}</span>
-            {title ? <h2>{title}</h2> : null}
+            {title ? <h3>{title}</h3> : null}
             {title2 ? <p>{title2}</p> : null}
             {title3 ? (
               <p>

@@ -20,7 +20,7 @@ function Store() {
 
 export function Projects() {
   return (
-    <div id="projects" className="bg-3">
+    <div id="projects" className="background-3" data-testid="project-section">
       <h1 className="highlight mb-3 text-center">Projects</h1>
       <motion.div layout>
         <Routes>

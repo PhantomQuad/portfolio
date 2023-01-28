@@ -3,10 +3,10 @@ import { motion, useInView } from "framer-motion";
 
 export function Experience() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
 
   const container = {
-    hidden: { opacity: 0.5 },
+    hidden: { opacity: 0 },
     show: {
       opacity: 1,
       transition: {
@@ -19,11 +19,17 @@ export function Experience() {
 
   const item = {
     hidden: { x: 0, y: 0 },
-    show: { scale: [0, 1, 0.5, 1] },
+    show: {
+      scale: [0, 1, 0.5, 1],
+    },
   };
 
   return (
-    <div id="experience" className="bg-2 text-center">
+    <div
+      id="experience"
+      className="background-2 text-center"
+      data-testid="experience-div"
+    >
       <h1 className="highlight mb-3">Experience</h1>
       <motion.div
         ref={ref}
@@ -32,7 +38,11 @@ export function Experience() {
         animate={isInView ? "show" : "hidden"}
       >
         <div className="row">
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/bootstrap.png"
@@ -40,7 +50,11 @@ export function Experience() {
             />
             <p>Bootstrap</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/html-coding.png"
@@ -48,7 +62,11 @@ export function Experience() {
             />
             <p>HTML</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/css.png"
@@ -56,7 +74,11 @@ export function Experience() {
             />
             <p>CSS</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/javascript.png"
@@ -67,7 +89,11 @@ export function Experience() {
         </div>
 
         <div className="row">
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/debug.png"
@@ -75,7 +101,11 @@ export function Experience() {
             />
             <p>Debugging</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/github.png"
@@ -83,7 +113,11 @@ export function Experience() {
             />
             <p>Github</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/mongo.png"
@@ -91,7 +125,11 @@ export function Experience() {
             />
             <p>MongoDB</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/oop.png"
@@ -102,7 +140,11 @@ export function Experience() {
         </div>
 
         <div className="row">
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/node.png"
@@ -110,7 +152,11 @@ export function Experience() {
             />
             <p>Node.js</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/pair.png"
@@ -118,7 +164,11 @@ export function Experience() {
             />
             <p>Pair Programming</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/regex.png"
@@ -126,7 +176,11 @@ export function Experience() {
             />
             <p>RegEX</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/tdd.png"
@@ -137,7 +191,11 @@ export function Experience() {
         </div>
 
         <div className="row">
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/react.png"
@@ -145,7 +203,11 @@ export function Experience() {
             />
             <p>React.js</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/mysql.png"
@@ -153,7 +215,11 @@ export function Experience() {
             />
             <p>MySQL</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/devops.png"
@@ -161,7 +227,11 @@ export function Experience() {
             />
             <p>Azure DevOps</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/aws.png"
@@ -172,7 +242,11 @@ export function Experience() {
         </div>
 
         <div className="row">
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/jquery.png"
@@ -180,7 +254,11 @@ export function Experience() {
             />
             <p>JQuery</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/express.png"
@@ -188,7 +266,11 @@ export function Experience() {
             />
             <p>Express.js</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/linux.png"
@@ -196,7 +278,11 @@ export function Experience() {
             />
             <p>Linux</p>
           </motion.div>
-          <motion.div className="col" variants={item}>
+          <motion.div
+            className="col-3"
+            variants={item}
+            data-testid="experience-item"
+          >
             <img
               className="pro-image"
               src="/assets/img/experience/cicd.png"

@@ -1,41 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Cuprum&family=Suez+One&display=swap");
 
-#contact img:first-child {
-  margin-right: 10px; /* or any other value */
+:root {
+  --highlight-color: #ffe037;
+  --page-text-color: #ffffff;
+  --bg-color1: #1dcd9f;
+  --bg-color2: #474e5d;
+  --main-font1: "Suez One", serif;
 }
-#contact img:last-child {
-  margin-left: 10px; /* or any other value */
+
+/* Space out the contactme images */
+#contact img {
+  margin: 0 10px;
 }
 
 .social {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-header {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}
-
-.avatar {
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  position: absolute;
-  overflow: hidden;
-  -webkit-box-shadow: 0px -1px 15px rgba(0, 0, 0, 0.3),
-    0px 1px 25px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px -1px 15px rgba(0, 0, 0, 0.3),
-    0px 1px 25px rgba(0, 0, 0, 0.7);
-  box-shadow: 0px -1px 15px rgba(0, 0, 0, 0.3), 0px 1px 25px rgba(0, 0, 0, 0.7);
-}
-
-.avatar,
-.avatar img {
-  /* width: 170px; */
-  height: 8rem;
 }
 
 .social-img {
@@ -56,84 +37,61 @@ li {
 }
 
 #home {
-  font-family: "Suez One", serif;
+  font-family: var(--main-font1);
   font-size: 3.2rem;
 }
 
-#home .highlight {
-  color: #ffe037;
+#home .highlight,
+#experience .highlight,
+#contact .highlight,
+#projects .highlight {
+  font-family: var(--main-font1);
+  color: var(--highlight-color);
   font-size: 4.3rem;
 }
 
-#experience .highlight {
-  font-family: "Suez One", serif;
-  color: #ffe037;
-  font-size: 70px;
-}
-
-#contact .highlight {
-  font-family: "Suez One", serif;
-  color: #ffe037;
-  font-size: 70px;
-}
-
-#projects .highlight {
-  font-family: "Suez One", serif;
-  color: #ffe037;
-  font-size: 70px;
+#experience p {
+  font-size: 0.8em;
 }
 
 .pro-image {
   height: auto;
-  /* width: 70px; */
   width: 5rem;
 }
 
-.text-center-vh {
+.center-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.bg-1 {
-  background-color: #1dcd9f;
+.background-1 {
+  background-color: var(--bg-color1);
   height: 100vh;
-  color: #ffffff;
+  color: var(--page-text-color);
 }
 
-.bg-2 {
-  padding-top: 15px;
-  padding-bottom: 25px;
-  background-color: #474e5d;
+.background-2,
+.background-3,
+.background-4 {
+  padding: 15px 0 25px;
   width: 100%;
-  height: auto;
   overflow: hidden;
-  color: #ffffff;
   font-size: 20px;
 }
 
-.bg-3 {
-  padding-top: 15px;
-  padding-bottom: 25px;
-  background-color: #1dcd9f;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
+.background-2 {
+  background-color: var(--bg-color2);
+  color: var(--page-text-color);
 }
 
-.bg-4 {
-  padding-top: 15px;
-  padding-bottom: 25px;
-  background-color: #474e5d;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
+.background-3 {
+  background-color: var(--bg-color1);
 }
 
-.bg-5 {
-  background-color: #1dcd9f;
-  height: 50vh;
-  color: #ffffff;
+.background-4 {
+  background-color: var(--bg-color2);
+  color: var(--page-text-color);
 }
 
 .arrow {
@@ -142,6 +100,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .arrow span {
   display: block;
   width: 30px;
@@ -152,20 +111,25 @@ li {
   margin: -10px;
   animation: animate 2s infinite;
 }
+
 .arrow span:nth-child(2) {
   animation-delay: -0.2s;
 }
+
 .arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
+
 @keyframes animate {
   0% {
     opacity: 0;
     transform: rotate(45deg) translate(-20px, -20px);
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
     transform: rotate(45deg) translate(20px, 20px);
@@ -175,7 +139,6 @@ li {
 .card-list {
   display: flex;
   flex-wrap: wrap;
-  align-content: center;
   align-items: center;
   justify-content: center;
 }
@@ -186,7 +149,6 @@ li {
   height: 280px;
   flex: 0 0 30%;
   max-width: 40%;
-  border-radius: 0;
   background: rgba(0, 0, 0, 0.2);
 }
 
@@ -264,14 +226,16 @@ li {
   left: 30px;
 }
 
-h2 {
+/* Card text - bottom text */
+.card-content-container h3 {
   color: #fff;
-  margin: 8px 0;
+  margin: 3px 0;
 }
 
+/* Card text - top title */
 .category {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-transform: uppercase;
 }
 
@@ -305,9 +269,10 @@ h2 {
   width: 90vw;
 }
 
+/* Card text - when open main text */
 .card-content-container p {
   color: #9d9ca1;
-  font-size: 20px;
+  font-size: 1.2rem;
   line-height: 26px;
 }
 
@@ -335,9 +300,6 @@ h2 {
     max-width: 30vw;
     padding: 10px;
     height: 42vh;
-  }
-  .card-content-container.open {
-    padding: 0;
   }
 }
 
