@@ -1,60 +1,46 @@
 pipeline {
-    agent {
-        label 'npm'
+  agent {
+    docker {
+     image 'node:6-alpine'
+     args '-p 3000:3000'
     }
-    stages {
-        stage('Cache') {
-            steps {
-                script {
-                    def npmCacheDir = "${env.WORKSPACE}/.npm"
-                    sh "mkdir -p ${npmCacheDir}"
-                    sh "cp package-lock.json ${npmCacheDir}"
-                }
-            }
+  }
+  environment {
+    CI = 'true'
+    HOME = '.'
+    npm_config_cache = 'npm-cache'
+  }
+  stages {
+    stage('Install Packages') {
+      steps {
+        sh 'npm install'
+      }
+    }
+    stage('Test and Build') {
+      parallel {
+        stage('Run Tests') {
+          steps {
+            sh 'npm run lint'
+            sh 'npm run test'
+          }
         }
-        stage('Dependencies') {
-            steps {
-                sh 'npm ci --cache ${npmCacheDir}'
-            }
+        stage('Create Build Artifacts') {
+          steps {
+            sh 'npm run build'
+          }
         }
-        stage('Show cache') {
-            steps {
-                sh 'npm cache ls'
-                sh 'npm cache verify'
-            }
-        }
-        stage('Lint') {
-            steps {
-                sh 'npm run lint'
-            }
-        }
-        stage('Unit Tests') {
-            steps {
-                sh 'npm run test:ci'
-            }
-        }
-        stage('Build') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-        stage('Artifacts') {
-            steps {
-                script {
-                    def artifactsDir = "${env.WORKSPACE}/build"
-                    sh "mkdir -p ${artifactsDir}"
-                    sh "cp -r build/* ${artifactsDir}"
-                }
-            }
-        }
-        stage('Deploy') {
-            steps {
-                // withAWS(credentials: 'Phantom Github', region: 'us-east-1') {
-                //     sh "aws s3 cp ${env.WORKSPACE}/build s3://ssl-portfolio-customresourcestack-pi-s3bucketroot-q0dd16y5wq4z --recursive"
-                // }
+      }
+    }
+
+stage('Production') {
+  steps {
+    // withAWS(region:'YOUR_BUCKET_REGION',credentials:'CREDENTIALS_FROM_JENKINS_SETUP') {
+    // s3Delete(bucket: 'YOUR_BUCKET_NAME', path:'**/*')
+    // s3Upload(bucket: 'YOUR_BUCKET_NAME', workingDir:'build', includePathPattern:'**/*');
+    //         }
                 echo 'Test Completed...'
 
-            }
+          }
         }
     }
 }
