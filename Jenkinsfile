@@ -7,9 +7,11 @@ pipeline {
 
   }
   stages {
-    stage('Build') {
+    stage('Install Dependencies') {
       steps {
-        sh 'npm install'
+        sh 'npm ci --cache'
+        sh 'npm cache ls'
+        sh 'npm cache verify'
       }
     }
 
@@ -17,6 +19,12 @@ pipeline {
       steps {
         sh "chmod +x -R ${env.WORKSPACE}"
         sh './jenkins/scripts/test.sh'
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'npm run build'
       }
     }
 
