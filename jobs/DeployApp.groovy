@@ -15,7 +15,7 @@ pipelineJob("Deploy-Portfolio"){
         }
     }
     parameters {
-      stringParam("UNIQUE_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
+      stringParam("UNIQUE_ANIMAL_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
     }
     definition {
     cpsScm {
@@ -28,7 +28,7 @@ pipelineJob("Deploy-Portfolio"){
           }
         }
       }
-      scriptPath('Jenkinsfile')
+      scriptPath('./jenkins/vanilla/Jenkinsfile')
     }
   }
 }
@@ -42,7 +42,7 @@ pipelineJob("Destroy-Portfolio"){
         disableConcurrentBuilds()
     }
     parameters {
-      stringParam("UNIQUE_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
+      stringParam("UNIQUE_ANIMAL_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
     }
     definition {
     cpsScm {
