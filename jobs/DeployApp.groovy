@@ -5,13 +5,6 @@ pipelineJob("Deploy-Portfolio"){
         numToKeep(20)
     }
     properties {
-        pipelineTriggers {
-            triggers {
-                scm("* * * * *"){
-                    ignorePostCommitHooks(ignorePostCommitHooks = false)
-                }
-            }
-    }
         disableConcurrentBuilds()
     }
 
