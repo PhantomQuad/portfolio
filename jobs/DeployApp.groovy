@@ -5,19 +5,18 @@ pipelineJob("Deploy-Portfolio"){
         numToKeep(20)
     }
     properties {
-        disableConcurrentBuilds()
-    }
-    properties {
         pipelineTriggers {
             triggers {
                 scm("* * * * *"){
                     ignorePostCommitHooks(ignorePostCommitHooks = false)
                 }
             }
-        }
     }
+        disableConcurrentBuilds()
+    }
+
     parameters {
-      stringParam("UNIQUE_ANIMAL_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
+      stringParam("UNIQUE_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
     }
     definition {
     cpsScm {
@@ -44,7 +43,7 @@ pipelineJob("Destroy-Portfolio"){
         disableConcurrentBuilds()
     }
     parameters {
-      stringParam("UNIQUE_ANIMAL_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
+      stringParam("UNIQUE_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
     }
     definition {
     cpsScm {
