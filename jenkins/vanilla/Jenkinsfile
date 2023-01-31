@@ -5,12 +5,13 @@ pipeline {
         terraform "terraform"
     }
     stages {
-        stage("Build") {
+        stage("Install Packages") {
             steps {
                 script {
                     sh """
-                    npm install
-                    npm run build
+                    npm ci --cache
+                    npm cache ls
+                    npm cache verify
                     """
                 }
             }
@@ -18,7 +19,16 @@ pipeline {
         stage("Test") {
             steps {
                 script {
-                    sh script: "npm test", returnStatus: true
+                    sh script: "npm run test:ci", returnStatus: true
+                }
+            }
+        }
+        stage("Build") {
+            steps {
+                script {
+                    sh """
+                    npm run build
+                    """
                 }
             }
         }
