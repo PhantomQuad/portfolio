@@ -4,7 +4,9 @@ pipelineJob("Deploy-Portfolio"){
         daysToKeep(5)
         numToKeep(20)
     }
-    concurrentBuild(allowConcurrentBuild = false)
+    properties {
+        disableConcurrentBuilds()
+    }
     triggers {
         scm("* * * * *"){
             ignorePostCommitHooks(ignorePostCommitHooks = false)
@@ -34,7 +36,9 @@ pipelineJob("Destroy-Portfolio"){
         daysToKeep(5)
         numToKeep(20)
     }
-    concurrentBuild(allowConcurrentBuild = false)
+    properties {
+        disableConcurrentBuilds()
+    }
     parameters {
       stringParam("UNIQUE_IDENTIFIER", defaultValue = "portfolioaws", description = "Unique identifier!")
     }
@@ -42,7 +46,7 @@ pipelineJob("Destroy-Portfolio"){
     cpsScm {
       scm {
         git {
-          branch("master")
+          branch("development")
           remote {
             credentials("${GIT_USER}")
             url("${GIT_URL}")
