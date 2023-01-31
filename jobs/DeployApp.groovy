@@ -6,6 +6,8 @@ pipelineJob("Deploy-Portfolio"){
     }
     properties {
         disableConcurrentBuilds()
+    }
+    properties {
         pipelineTriggers {
             triggers {
                 scm("* * * * *"){
