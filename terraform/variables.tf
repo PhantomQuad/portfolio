@@ -1,9 +1,9 @@
 variable "security_group_id" {
-  default = "sg-0cfa06fed7a4649c7"
+  default = "sg-0c3a685c5a7a83cf7"
 }
 
 variable "subnet_id" {
-  default = "subnet-02db31a87afc4dc31"
+  default = "subnet-04a74248b7de751ab"
 }
 
 variable "region" {
