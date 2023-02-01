@@ -19,6 +19,7 @@ pipeline {
         stage("Test") {
             steps {
                 script {
+                    sh script: "npm run lint", returnStatus: true
                     sh script: "npm run test:ci", returnStatus: true
                 }
             }
