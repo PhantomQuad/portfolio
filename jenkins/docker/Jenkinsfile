@@ -36,7 +36,7 @@ pipeline {
 
 stage('Production') {
   steps {
-    withAWS(region:'eu-west-1',credentials:'nathan') {
+    withAWS(region:'eu-west-2',credentials:'nathan') {
     s3Delete(bucket: 'ssl-portfolio-customresourcestack-pi-s3bucketroot-q0dd16y5wq4z', path:'**/*')
     s3Upload(bucket: 'ssl-portfolio-customresourcestack-pi-s3bucketroot-q0dd16y5wq4z', workingDir:'build', includePathPattern:'**/*');
             }
