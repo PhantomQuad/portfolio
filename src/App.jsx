@@ -1,4 +1,4 @@
-import "./App.min.css";
+import "./app.min.css";
 import React from "react";
 import { Projects } from "./components/Projects";
 import { ContactMe } from "./components/ContactMe";

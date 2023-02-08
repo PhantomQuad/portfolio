@@ -2,6 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { items } from "./data";
+import PropTypes from "prop-types";
+
+Item.propTypes = {
+  id: PropTypes.string,
+};
 
 export function Item({ id }) {
   const {

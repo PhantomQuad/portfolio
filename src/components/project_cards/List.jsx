@@ -2,6 +2,14 @@ import React from "react";
 import { items } from "./data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+
+Card.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  category: PropTypes.string,
+  theme: PropTypes.string,
+};
 
 function Card({ id, title, category, theme }) {
   return (
@@ -31,6 +39,10 @@ function Card({ id, title, category, theme }) {
     </li>
   );
 }
+
+List.propTypes = {
+  selectedId: PropTypes.string,
+};
 
 export function List({ selectedId }) {
   return (
