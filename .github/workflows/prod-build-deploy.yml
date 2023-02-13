@@ -16,8 +16,20 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16"
+          cache: "npm"
+          cache-dependency-path: subdir/package-lock.json
       - name: Installing dependencies
-        run: npm install
+        run: npm ci
+      - name: NPM Show Cache
+        run: npm cache ls
+      - name: NPM Check Cache
+        run: npm cache verify
+
+      - name: Lint
+        run: npm run lint
+      - name: Unit Tests
+        run: npm run test:ci
+
       - name: Building project
         run: npm run build
       - name: Configure AWS Credentials
