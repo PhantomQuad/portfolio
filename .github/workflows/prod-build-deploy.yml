@@ -7,7 +7,7 @@ on:
       - master
 jobs:
   # To build the project
-  build-tambola:
+  build-portfolio:
     runs-on: ubuntu-latest
     steps:
       - name: Checking out code
@@ -28,4 +28,4 @@ jobs:
           aws-region: eu-west-2
 
       - name: Deploy to S3 bucket
-        run: aws s3 sync ./dist/ s3://ssl-portfolio-customresourcestack-pi-s3bucketroot-q0dd16y5wq4z --delete
+        run: aws s3 sync ./build/ s3://ssl-portfolio-customresourcestack-pi-s3bucketroot-q0dd16y5wq4z --delete
